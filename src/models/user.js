@@ -96,7 +96,7 @@ const orderByCost = async (locationNodeLatitude,locationNodeLongitude,destinatio
     `
         )
 
-            // paths[]: an array to store the stops of all paths combined together in order but with no subarrays     
+    // paths[]: an array to store the stops of all paths combined together in order but with no subarrays     
     let paths = [];
 
     //path[]: an array to represent each path in the paths[] as a subarray    
