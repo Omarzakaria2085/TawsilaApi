@@ -16,13 +16,13 @@ const findAll = async () => {
 }
 
 //a function to order all available paths by distance given 2 points
-const orderByDistance = async (locationNode , destinationNode) => {
-    let locationArr = locationNode.split(",");
-    let destinationArr = destinationNode.split(",");
-    let locationNodeLatitude =     parseFloat(locationArr[0]);
-    let locationNodeLongitude =    parseFloat(locationArr[1]);
-    let destinationNodeLatitude =  parseFloat(destinationArr[0]);
-    let destinationNodeLongitude = parseFloat(destinationArr[1]);
+const orderByDistance = async (locationNodeLatitude, locationNodeLongitude,destinationNodeLatitude, destinationNodeLongitude) => {
+    // let locationArr = locationNode.split(",");
+    // let destinationArr = destinationNode.split(",");
+    // let locationNodeLatitude =     parseFloat(locationArr[0]);
+    // let locationNodeLongitude =    parseFloat(locationArr[1]);
+    // let destinationNodeLatitude =  parseFloat(destinationArr[0]);
+    // let destinationNodeLongitude = parseFloat(destinationArr[1]);
 
     let result = await session.run(
         `
@@ -84,13 +84,7 @@ const orderByDistance = async (locationNode , destinationNode) => {
 }
 
 //a function to order all available paths by cost given 2 points
-const orderByCost = async (locationNode , destinationNode) => {
-    let locationArr = locationNode.split(",");
-    let destinationArr = destinationNode.split(",");
-    let locationNodeLatitude =     parseFloat(locationArr[0]);
-    let locationNodeLongitude =    parseFloat(locationArr[1]);
-    let destinationNodeLatitude =  parseFloat(destinationArr[0]);
-    let destinationNodeLongitude = parseFloat(destinationArr[1]);
+const orderByCost = async (locationNodeLatitude, locationNodeLongitude,destinationNodeLatitude, destinationNodeLongitude) => {
 
     let result = await session.run(
         `
